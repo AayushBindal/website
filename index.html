@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css"/>
+<script src="sketch.js"></script>
+<meta charset="UTF-8"/>
+<title>learn html</title>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  
+<div class="row">
+  <div class="left" style="background-color: rgb(170, 172, 60)">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+    <ul id="myMenu">
+      <li><a href="#paragraph">paragraph</a></li>
+      <li><a href="#headings">heading</a></li>
+      <li><a href="#anchor">anchor</a></li>
+      <li><a href="#hr">hr</a></li>
+      <li><a href="#bullets">ul, ol, li</a></li>
+      <li><a href="#br">br</a></li>
+      <li><a href="#video">video</a></li>
+      <li><a href="#comment">comments</a></li>
+      <li><a href="#iframe">iframe</a></li>
+      <li><a href="#scrollbar">scrollbar</a></li>
+      <li><a href="#mapAndArea">map and area</a></li>
+      <li><a href="#list">list or definations</a></li>
+      <li><a href="#embed">embed video or image</a></li>
+      <li><a href="#sds">overline</a></li>
+      <li><a href="#u">underline</a></li>
+      <li><a href="#b">bold</a></li>
+      <li><a href="#entitySign">signs</a></li>
+      <li><a href="#button">buttons</a></li>
+    </ul>
+    <button class = "buttonNothing" id = "darkModeBtn" onclick="myFunction2()" width = "30px" style="background-color:rgb(66, 62, 62)" > Dark mode </button>
+    <button class = "buttonNothing" id = "redMode" onclick="red()" width = "30px" style="background-color:rgb(151, 90, 90)" > red mode </button>
+  </div>
+  <script>
+    function myFunction2() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+    function red() {
+      var element = document.body;
+      element.classList.toggle("red-mode");
+    }
+    </script>
+  <div class="right" style="background-color:#ddd;">
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</html>
+</div>
+
+<div id="main">
+  <button class="openbtn" id = "searchBox" onclick="openNav()">☰ Open search box</button>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "290px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<html>
+  <body>
+    <!--To create top going button-->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      
+      <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+
+  </div>
+    <!--introdunction to html=================================================================================================-->
+    <div id = "html"> <hr color = "green" size = "5"/>
+      <h1> html </h1>
+      <p> html stands for hyper-text-markup-language. </br>
+          It is similar to markdown</br>
+          In html some closing and opening brakects type are used called tags. They have a syntax of <  >. <!--tagName is the name of that particular tag-->
+      </p> 
+      <!--introduction to paragraph===========================================================================================-->
+      <div id = "paragraph"> <hr color = "green" size = "5"/> </div>
+      <h2> <li> tags used to create paragraph </li> </h2>
+        <ol>
+          <li> It have a syntax of 
+                <img src = "simple-p-tag.png" alt = "p tag image" width = "400" height = "200" > </li>
+            <li> It is used to create paragraph. </li>
+            <li> If we want 2 sentences to be different lines then we need to create 2 different tags for them </li>
+        </ol> 
+        <!--introduction to headings==========================================================================================-->
+       <div id = "headings"> <hr color = "green" size = "6"/> </div>
+        <h2> <li> Tags used to create headings </li> </h2> 
+        <img src = "https://3.bp.blogspot.com/-1naTG22HtFw/Wf_6d6jqJbI/AAAAAAAABQ0/awp8H7a39B8tvRZJujAmjClwbvsFrATtACLcBGAs/s1600/H1-Tag.jpg" alt = "headings format" width = 400 height = "200">
+        <ol> 
+        <li> In the two lesser than and greater than symbol write h1 </li>  
+        <li> If you want heading to be a little small than in place of h1 write h2 </li>
+        <li> If you want to decrease it's size more small than it then write h3 , h4 and so on</li>
+        <li> remember that numbers near to 0 have more size of heading </li>
+        <li> this is mostly used upto h10</li>
+        </ol>
+      <!--introduction to anchor tag==========================================================================================-->
+      <div id = "anchor"> <hr color = "green" size = "5"/>  </div>
+      <h2> <li> Tags used to create hyper link </li> </h2>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS36z5ktliA8oOD7-d8a1Ybv6ADqy7MR5moDQ&usqp=CAU" alt = "anchor tag">
+        <img src = "simple-p-tag2.png" alt = syntax width = "500">
+        <ol> 
+          <li> This is written in the format in which a is written in 2 greater and smaller than symbol </li>
+          <li> For example :- <a href = "" target = "_blank" > new tab </a></li>
+          <li> If you click on the new tab option then a new tab will open </li>
+        </ol>
+        <hr color = "green" size = "6"/>
+      <!--introduction to hr tag==============================================================================================-->
+      <ul> <h2> <li>Tags used to create lines </li><h2></ul>
+      <div id = "hr">  <img src = "https://www.webdevelopersnotes.com/wp-content/uploads/html-reference-guide-the-hr-tag.png" alt = "hr tag" width = "300"> </div>
+        <ol>
+        <li> if we want to create line then we use hr tag </li>
+        <li> you can create line by using the following  <a href = "Untitled.png" target = "_blank">  syntax </a> </li>
+        <li> remember that if you setup % in width than the width your line will be in comparision to the width of the tab which you are using </li>
+        <li> The output of the following code snippet will be</li>
+        <hr color = "red" width  = "90%"/>
+        <li> Here I have taken width as 90% you can also try giving in pixels(px) ⬆</li>
+        <hr size = "20" color = ""red/>
+        <li> Here I have taken size as 20 ⬆ </li>
+        <hr width = "80%" align="right" color="red">
+        <li> Here alignment is to right ⬆ </li>
+      </ol>
+      
+      <!-- introduction to ul, ol and li tag==================================================================================-->
+      <!--usage of bullets-->
+      <div id = "bullets"> <hr color = "green" size = "6">  </div>
+      <ul> <h2> <li> Tags used to create bullets , numbers and to list them in the order </li> </h2> </ul>
+      <ol> <li> Now we will try to learn how create bullets </li> </ol>
+      <ul> 
+      <li> Now first of all we will list the lines, as we did in paragraph tag to differentiate two lines we used opening and closing p tag 
+          we will list those items now using li tag.
+      </li> 
+      <li> These types of tag are known as li tag. It stands for 'list items' </li>
+      <li> The line you want to list or put seperate keep then in li tag followed by opening and closing tag as we did in other one. </li>
+      <li> Now computer knows how many lines are there but still they are not having any bullets. </li>
+      <li> To do so you are needed to put li tag which you used to list items in the ul tag.</li>
+      <li> ul tag syntax is same as the li one/. Just open and close one tag at the start and end of li tag respectively. </li>
+      <li> ul tag stands for 'unordered list' </li>
+      <li> Now your senteences are in bullets. </li>
+      <li> <a href = "index2.html" target = "_blank"> your reference link  </a> </li>
+      </ul> 
+      <!-- usage of numbers-->
+      <li>2. To create numbers</li> 
+      <ul>
+      <li> We created bullets but what of numbers. Just instead of ul tag put ol tag in the same way </li>
+      <li> ol stands for ordered list which will help you to create numbers </li>
+      <li> if you need to start number not from 1 then write start in front of opening ol tag. Get more in reference link </li>
+      <li> <a href = "index3.html" target = "_blank"> your reference link </a></li>
+      </ul>
+      <hr color = "green" size = "6"/>
+      <!--introduction to br tag===========================================================================================-->
+     <div id = "br"> <ul> <h2> <li> Tags used to create gaps in lines or sentences </li> </h2> </ul> </div>
+      <img src = "https://www.stwi.in/images/blog/html-code/br.jpg" alt = "br tag" width = "300">
+      <ol> 
+      <li> Now if you need to give some more space between two lines we use br tag. </li>
+      <li> The syntax of br tag is same as the hr tag. We need not to use opening and closing tags differently.</li>
+      <li> <a href = "br.html" target = "_blank"> Go here to see it's syntax </a> </li>
+      </ol>
+      <!--introduction to video tag========================================================================================-->
+     <div id= "video"> <hr color = "green" size = "6"/></div>
+      <ul> <h2> <li> Tags used to embed video inside the web pages using html </li> </h2> </ul>
+      <img src = "https://i.ytimg.com/vi/JDq6hAOVKKY/maxresdefault.jpg" alt = "video tag" width = "300">
+      <ul>
+      <li> Sometimes we are needed to embed a video in the web pages. For it we are needed to use video tag. </li>  
+      <li> <a href = "video.html" target = "_blank"> you may find it's syntax here </a> </li>
+      <li> In src you can give the link of the video you want either from the you tube or from your local system </li>
+      <li> Its better if your video format is in the form of mp3. </li>
+      </ul>
+      <!--introduction to comments=========================================================================================-->
+      <div id = "comment"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Tags used to put comments </li> </h2> </ul>
+      <img src = "data:image/png;base64,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" alt = "html comments" width = "300">
+      <ol>
+      <li> In some teams like google microsoft etc. many members are their. One prepares some part of code and send to other one. But how will they identify that the code is about. They will need some hints through which they can identify the code is about </li>  
+      <li> Those types of hints are called comments.  </li> 
+      <li> Comments are actually not read by the computer. They surely have some syntax of writting. If computers sees that syntax than that device will ignore the line and move forwards. Languages have their particular type of comments syntax </li>
+      <li> In html we put comments by writing 2 smaller and greater than symbols and a ! in them and putting ---- after !. </li>
+      <li> You can write anything between -- and --. Its better it you explain the meaning of code their. </li>
+      <li> <a href = "comment.html" target = "_blank"> see it here </a> </li>
+      <li> See carefully comments are not displayed. </li>
+    </ol>
+      <!--introduction to iframe tag========================================================================================-->
+     <div id = "iframe"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Tags used to embed any type of website or any other web page in your website. </li> </h2> </ul>
+      <img src = "data:image/jpeg;base64,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" alt = "iframe tag" width = "300">
+      <ol> 
+       <li> Many websites provides online games, code editor and many many other platforms which can't be easily created in the html or any other language on websites. Have you ever wonder how do they do? </li> 
+       <li> They do it by using iframe tag. </li>
+       <li> Syntax of iframe tag is similar to that of image tag. Just need to replace image with iframe. </li>
+       <li> At the place of src link, write the link of your website you want to embed. And if you won't write alt then it will be also fine. </li>
+       <li> Also syntax for giving dimentions are also same. </li>
+       <li> <a href = "iframe.html" target = "_blank">Go here to work out practically </a> </li>
+      </ol>
+      <!--help to change scrollbar=============================================================================================-->
+     <div id= "scrollbar"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Help to change scrollbar </li> </h2> </ul>
+      <img src = "https://1.bp.blogspot.com/-vDSds-KbT_c/V_zMdfNLGUI/AAAAAAAACCs/OXAC_qA1Jzwitr54B_4Bk_OeiYPUSWzQACLcB/s1600/Capture.JPG" alt = "scrollbar" width = "300">
+     <ol> <li> <a href = "scrollbar.html" target = "_blank"> go preference </a> </li> </ol>
+     <!--introduction to map and area tag===================================================================================-->
+     <div id= "mapAndArea"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Map amd Area Tags </li> </h2> </ul>
+      <img src = "https://th.bing.com/th/id/OIP.2n561WyOm9Xd9P80pc4aZAHaFj?w=222&h=180&c=7&o=5&dpr=1.25&pid=1.7" alt = "map tag"/>
+      <ol>
+        <li> The map tag is used to define an image map. An image map is an image with clickable areas.</li>
+        <li> The map element contains a number of area elements, that defines the clickable areas in the image map.</li>
+        <li> Map tag has some attributes like shape, coordinates (coords), alt, href </li>
+        <li> Sometime img tag is also used inside it. </li>
+        <img src = "https://media.istockphoto.com/photos/laptop-with-blank-screen-in-office-picture-id963149474?k=6&m=963149474&s=170667a&w=0&h=i42zxzLP7yezfv83oRD1GctAAHlaik1lA-oDoSUdW4w=" width = "300" alt = "trialImage/">
+        <li> Suppose what happen if you wanted that if want to code such like that, if the cursor laptop than a new link appears.</li>
+        <li> Definately you will try to use anchor tag but it will not work because you want different link for different images. </li>
+        <li> For this purpose we use map tag and it's attributes </li>
+        <li> This is the unpaired tag. </li>
+        <li> <a href = "mapTag.html" target = "_blank"> Go here to see more. </a> </li>
+      </ol>
+      <!--introduction to dl, dt and dd tags===============================================================================-->
+     <div id = "list"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Tags used to create definations </li> </h2> </ul>
+      <img src = "https://www.computerhope.com/jargon/h/dl.gif" alt = "dl tag" width = "20%"/> <img src = "https://www.computerhope.com/jargon/h/dt.gif" alt =" dt tag" > <img src = "https://www.computerhope.com/jargon/h/dd.gif" alt = "dd tag">
+      <ol>
+      <li> The dl tag, dt tag, dd tag are used to perform together unlike ul, ol, and li tags. </li>
+      <li> The dl tag defines a description list. </li>
+      <li> The dt defines terms and names. </li>
+      <li> The dd tag is used to create definations. </li>
+      <li> <a href = "definationTag.html" target = "_blank"> Go here to see it practically </a>  </li>
+      </ol>
+      <!--introduction to embed tag-->
+     <div id = "embed"> <hr color = "green" size = "6"/></div>
+      <ul> <h2> <li> Tags used to embed video, image etc. </li> </h2> </ul>
+      <img src = "https://th.bing.com/th/id/OIP.A5RUlhBzEFtPUHpvYuLuPAHaHa?pid=ImgDet&w=221&h=221&c=7&dpr=1.25" alt = "embed audio" width = "150px">
+      <ol>
+      <li> Now sometimes you all need to embed some types of things in your website for that also we use a tag called embed tag. </li>
+      <li> embed tag is a type of unpaired tag. </li>
+      <li> <a href = "embed Tag.html" target = "_blank"> Go here to see how to use embed </a> </li>
+    </ol>
+    <!--introduction to strike, del and s tag-->
+   <div id = "sds"> <hr color = "green" size = "6"> </div>
+    <ul> <h2> <li> Tags used to overline the text </li> </h2> </ul>
+    <img src = "html strike tag.png" alt = "html overline" width = "300">
+    <ol>
+    <li> This is the tag in which you can take a line to middle of the text. </li>  
+    <li> This tag can be used in css style also. We will learn this in css. </li>
+    <li> We leant to create list, headings and many different types of text but sometime we wish to underline or overline and even take the line in middle . </li>  
+    <li> To do that just put opening and closing strike tag in between of the tag which you used to create text. </li>
+    <li> <a href = "strikeTag.html" target = "_blank"> Go here to practice it. </a> </li>
+    <li> <h3> Alternative of strike tag </h2> </li>
+    <li> In html5 strike tag isn't supported. So, we have it's alternative for it. i.e. del and s </li>
+    <li> Syntax is same, just write del or s in place of strike. </li>
+    <img src = "del and s tag.png" width = "900"> </a> 
+    </ol>
+    <!--introduction to u tag-->
+    <div id = "u"> <hr color = "green" size = "6"> </div>
+    <ul> <h2> <li> Tags used to underline the text </li> </h2> </ul>
+    <img src = "https://th.bing.com/th/id/OIP.QkZoM7S-V00BBvGngvSA6AHaE9?w=234&h=180&c=7&o=5&dpr=1.25&pid=1.7" alt = "u tag">
+    <ol >
+      <li> This is the tag which is used to underline text. </li>
+      <li> This tag can be used in css style also. We will learn this in css. </li>
+      <li> We leant to create list, headings and many different types of text but sometime we wish to underline or overline and even take the line in middle . </li>  
+      <li> To do that just put opening and closing u tag in between of the tag which you used to create text. </li>
+      <li> <a href = "u tag.html" target = "_blank"> Go here to practice it. </a> </li>
+    </ol>    
+    <!--introduction to b tag-->
+   <div id= "b"> <hr color="green" size = "6"/> </b> </div>
+     <ul> <h2> <li> Tags used to bold the text </li> </h2> </ul>
+     <img src = "https://tutorialcodeplay.com/uploads/tutorial/image/tutorial_images_1522850739.png" alt = "bold the text">
+       <ol>
+        <li> We sometime wanted to use the heading, content, special/difficult words and so on inside a text and the codition is not to increase it's size. So, we can't use any tag in that case what can we do? </li>   
+        <li> In such a situation we use b tag (here b stands for bold). The syntax is &lt b &gt Write your content/text here. &lt /b &gt </li>
+        <li> <b> Here is the example. </b> </li>
+        <li> <a href = "b tag.html" target = "_blank"> Go here to work upon it. </a> </li>
+      </ol>
+      <!--introduction to entity tag-->
+     <div id= "entitySign"> <hr color = "green" size = "6"/> </div>
+      <ul> <h2> <li> Tags used to create &lt &gt type of special symbol. </li> </h2> </ul>
+      <img src = "entites.png" alt = "entities." width = "400">
+      <ol>
+      <li> That's a new type of tag called Entities. It's syntax is entirely different from other one.</li>  
+      <li> It is used to create symbols like &lt &gt &amp &quot &yen etc. </li>
+      <li> Sometimes you want to insert sign of lesser than, greater than etc. But remember that it is used to create tags. Will computer will not get confused in that? surely yes. Than what to do? To avoid that confusion we use some special commands which are known as Entities. Every sign have different Entitiy. </li>
+      <li> For example we use to create lesser than sign is "& l t". </li>
+      <li> We need not to give any space in the entity </li>
+      <button> &lt </button> <button> & l t </button>  <br/> <br/>
+      <button class = "button2"> &gt </button> <button class = "button2"> & g t </button> 
+      <li> These were few of them. </li> </br>
+      <img src = "entiy.png" alt = "list of entity"/>  <br/><br/> <img src = "emojiEntity(1).png" alt = "emojilist1">
+      <img src = "emojiEntity(2).png" alt = "emojilist1"> <img src = "Screenshot (266).png" alt = "emojilist2">
+      <li> <a href = "entitity.html" target = "_blank"> Want to practice? here goes your interface. </a> </li>
+    </ol>
+    <!--introduction to button tag==============================================================================================-->
+    <div id = "button"><hr color = "green" size = "6"/> </div>
+    <ul> <h2> <li> Tags used to create button. </li> </h2> </ul>
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7FMnyipuBph6PqJVh-AaNIQ01oMQbFcyEnw&usqp=CAU" alt = "button tag image" width = "300px"/>
+    <ol>
+    <li> That's a button tag. </li>
+      <li> It is used to create a button. You might have seen many buttons in google forms(submit one), log in/sign up button etc. in many interfaces.  </li>
+      <li> Now we will leant to create them, use some of its attributes, and to give some more commands in html. </li>
+      <li> It is a pair tag means we need to put opening and closing tag for buttons. </li>
+      <li> <b> &ltbutton&gt</b> write something here. <b> &ltbutton&gt </b></li>
+      <li> See now it here. The code is :- <br/> <b> &ltbutton&gt</b> how are you <b> &ltbutton&gt </b>  </li>
+      <li> The output is:- <br/> <button class = "buttonDemo"> how are you </button></li>
+      <li> Now we would learn its attributes. </li>
+      <li> Its 1st attribute is type. </li>
+      <li> We are knowing different types of buttons like inputButton, submitButton etc.. </li>
+      <li> For ex:- 
+        <input type="text" id="lname" name="lname"><br/> <br/>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button> <br/> <br/>
+       <li> Its color is accordance to style.css, we will learn to use it also.</li>
+        <li> We will later learn to do for it more. </li>
+        <hr size = "6" color = "green"/>
+        <h6> imagesource:net </h6>
+      <code class = "licenceColor">  <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target = "_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target = "_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+      </code>
+      
+<hr color = "green" size = "6"/>
+      </body>
+  
+</html>

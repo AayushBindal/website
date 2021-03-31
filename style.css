@@ -1,0 +1,222 @@
+    /* To create style  */     
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(208, 255, 0);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+
+body{
+    margin-left:81px;
+    font-family: "Lato", sans-serif;
+  }
+
+h1 {
+    color:rgb(194, 251, 21);
+}
+
+h2{
+    color:rgb(251, 21, 21);
+}
+
+h4{
+    color:rgb(194, 251, 21);
+}
+
+h3{
+    color:rgb(194, 251, 21);
+}
+
+.image{
+    float: center;
+}
+
+button{
+    background-color: #4CAF50;
+}
+
+.button2{
+    background-color: #abf00a;
+}
+
+.buttonDemo{
+    background-color: #ffffff;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  /* Create a column layout with Flexbox */
+  .row {
+    display: flex;
+  }
+  
+  /* Left column (menu) */
+  .left {
+    flex: 35%;
+    padding: 15px 0;
+  }
+  
+  .left h2 {
+    padding-left: 8px;
+  }
+  
+  /* Right column (page content) */
+  .right {
+    flex: 65%;
+    padding: 15px;
+  }
+  
+  /* Style the search box */
+  #mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style the navigation menu inside the left column */
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block
+  }
+  
+  #myMenu li a:hover {
+    background-color: #eee;
+  }
+
+  .buttonNothing{
+    margin-left: 20px;
+    width: 100px;
+    height: 50px;
+  }
+
+  .buttonNothing:hover{
+    cursor: pointer;
+  }
+    
+  .dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  img{
+    border-radius: 8px;
+  }
+
+  .red-mode{
+    background-color: rgb(175, 67, 67);    
+
+  }
+
+  .licenceColor{
+    background-color: #c8ff00;
+  }
+
+  ::selection{
+    color:rgb(251, 21, 21);
+    background:rgb(255, 225, 0);
+  }
+  
+a:visited {
+  color: rgb(255, 157, 173);
+}
